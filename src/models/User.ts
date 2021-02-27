@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 class User {
 
   @PrimaryColumn()
-  readonly id: string;
+  readonly id!: string;
 
   @Column()
   name: string;
@@ -16,7 +16,7 @@ class User {
   @CreateDateColumn()
   create_at: Date;
 
-  constructor() {
+  constructor(id?: string) {
     if(!this.id) {
       this.id = uuid()
     }
