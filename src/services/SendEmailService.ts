@@ -33,4 +33,4 @@ class SendEmailService {
   }
 }
 
-export { SendEmailService };
+export default new SendEmailService();
