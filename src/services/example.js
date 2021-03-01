@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react'
 
 const example = () => {
   const [name, setName] = useState("Rafael");
-  const [options, setOptions] = useState(["1", "2", "3"]);
+  const options = ["1", "2", "3"]
 
   useEffect(() => {
     console.log("primitive variable dependent effect");
@@ -12,7 +12,7 @@ const example = () => {
     console.log("options array dependent effect");
   }, [options]);
 
-  useMemo(() => options, []);
+  options = useMemo(() => options, []);
 
   return (
     <form>
